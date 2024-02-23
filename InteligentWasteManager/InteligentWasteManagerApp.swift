@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct InteligentWasteManagerApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
+    @State private var isActive: Bool = false
+
+     var body: some Scene {
+         WindowGroup {
+             if isActive {
+                 ContentView()
+             } else {
+                 SplashScreenView(isActive: $isActive)
+             }
+         }
+     }
 }
