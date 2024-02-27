@@ -9,17 +9,15 @@ import SwiftUI
 
 struct IdentifiedWasteItemsView: View {
     
-    var classes = ["aluminum - Non_biodegradable-Recyclable", "cardboard - Non_Biodegradable-Recyclable", "egg shell - Biodegradable", "facemask - Non_Biodegradable", "food wrapper - Non_Biodegradable", "fruit peels - Biodegradable", "glass bottle - Non_Biodegradable", "left-over food - Biodegradable", "paper - Biodegradable-Recyclable", "pet bottle - Non_Biodegradable-Recyclable", "plastic bag - Non_Biodegradable", "plastic bottle - Non_Biodegradable", "plastic container - Non_Biodegradable", "plastic sachet - Non_Biodegradable", "plastic straw - Non_Biodegradable", "styrofoam containers - Non_Biodegradable", "treeleaves - Biodegradable", "uht carton - Non_Biodegradable-Recyclable", "vegetable peels - Biodegradable"]
     
-    var wasteViewModel : WasteItemViewModel
+    var wasteItemViewModel : WasteItemViewModel
     
     var body: some View {
         NavigationStack{
             ScrollView{
                 LazyVStack {
-                    ForEach(classes.indices, id: \.self){ index in
-                        ListItem(wasteType: StringHelperFunctions.getStringBeforeFirstDash(input: classes[index].capitalized) ?? "", category: wasteViewModel.getCategoryFromRawData(input: classes[index]) ?? "")
-                        
+                    ForEach(wasteItemViewModel.wasteItems){item in
+                        ListItem(wasteType: item.wasteType, category: item.category.rawValue)
                     }
                 }
             }
@@ -39,5 +37,5 @@ struct IdentifiedWasteItemsView: View {
 }
 
 #Preview {
-    IdentifiedWasteItemsView( wasteViewModel: WasteItemViewModel())
+    IdentifiedWasteItemsView(wasteItemViewModel: WasteItemViewModel())
 }
