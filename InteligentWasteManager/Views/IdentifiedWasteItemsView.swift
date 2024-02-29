@@ -8,31 +8,44 @@
 import SwiftUI
 
 struct IdentifiedWasteItemsView: View {
-    
-    
+
     var wasteItemViewModel : WasteItemViewModel
+    
+//    init() {
+//        let navBarAppearance = UINavigationBarAppearance()
+//        navBarAppearance.configureWithOpaqueBackground()
+//        navBarAppearance.backgroundColor = UIColor.orange
+//        UINavigationBar.appearance().standardAppearance = navBarAppearance
+//        UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+//    }
+
     
     var body: some View {
         NavigationStack{
-            ScrollView{
-                LazyVStack {
-                    ForEach(wasteItemViewModel.wasteItems){item in
-                        ListItem(wasteType: item.wasteType, category: item.category.rawValue)
+            List{
+                ForEach(wasteItemViewModel.wasteItems){item in
+                    NavigationLink{
+                        
+                    }label: {
+                        ListItem(wasteItemModel: item)
                     }
+                }.listRowSeparator(.hidden)
+                .listRowBackground(Capsule().padding(.vertical,5).foregroundColor(Color(red: 248 / 255, green: 250 / 255, blue: 237 / 255)))
+                
+            }
+            .navigationTitle("Identified Waste Types")
+            .navigationBarTitleDisplayMode(.inline)
+            .foregroundColor(Color(UIColor(red: 0.133, green: 0.133, blue: 0.133, alpha: 1.0)))
+            
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        Label("", systemImage: "list.bullet")
+                    })
                 }
             }
-                .navigationTitle("Identified Waste Types")
-                .navigationBarTitleDisplayMode(.inline)
-                .foregroundColor(Color(UIColor(red: 0.133, green: 0.133, blue: 0.133, alpha: 1.0)))
-                .toolbar {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                            Label("", systemImage: "list.bullet")
-                        })
-                    }
-                }
-                .background(Color(UIColor(red: 0.133, green: 0.133, blue: 0.133, alpha: 1.0)))
-        }
+            
+        }.background(Color.black)
     }
 }
 

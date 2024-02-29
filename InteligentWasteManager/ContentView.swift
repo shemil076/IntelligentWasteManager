@@ -25,16 +25,10 @@ struct ContentView: View {
                         Spacer()
                     }.padding([.top], -10)
                     Spacer()
-                    
-//                    Image("wasteManagementPurple")
-//                        .resizable()
-//                        .scaledToFit()
-                    
                     SlideShowView(images: mainImages)
                     Spacer()
                     
                     ScrollView(.horizontal) {
-                        // 2
                         LazyHStack {
                             ForEach(features.indices, id: \.self){ index in
                                 SliderButton(feature: features[index])

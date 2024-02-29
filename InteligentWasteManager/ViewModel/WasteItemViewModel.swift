@@ -34,17 +34,17 @@ import Observation
     
     
     func getInitialWasteItems(){
-        let aluminium = WasteItemModel(wasteType: StringHelperFunctions.getStringBeforeFirstDash(input: rawAluminium.capitalized), category: StringHelperFunctions.getCategoryFromRawData(input:  rawAluminium), icon: "")
+        let aluminium = WasteItemModel(wasteType: StringHelperFunctions.getStringBeforeFirstDash(input: rawAluminium.capitalized), category: StringHelperFunctions.getCategoryFromRawData(input:  rawAluminium), icon: "recycle")
         
-        let cardboard = WasteItemModel(wasteType: StringHelperFunctions.getStringBeforeFirstDash(input: rawCardboard.capitalized), category: StringHelperFunctions.getCategoryFromRawData(input:  rawCardboard), icon: "")
+        let cardboard = WasteItemModel(wasteType: StringHelperFunctions.getStringBeforeFirstDash(input: rawCardboard.capitalized), category: StringHelperFunctions.getCategoryFromRawData(input:  rawCardboard), icon: "recycle")
         
-        let eggShell = WasteItemModel(wasteType: StringHelperFunctions.getStringBeforeFirstDash(input: rawEggShell.capitalized), category: StringHelperFunctions.getCategoryFromRawData(input:  rawEggShell), icon: "")
+        let eggShell = WasteItemModel(wasteType: StringHelperFunctions.getStringBeforeFirstDash(input: rawEggShell.capitalized), category: StringHelperFunctions.getCategoryFromRawData(input:  rawEggShell), icon: "biodegradable")
         
-        let treeleaves = WasteItemModel(wasteType: StringHelperFunctions.getStringBeforeFirstDash(input: rawTreeleaves.capitalized), category: StringHelperFunctions.getCategoryFromRawData(input:  rawTreeleaves), icon: "")
+        let treeleaves = WasteItemModel(wasteType: StringHelperFunctions.getStringBeforeFirstDash(input: rawTreeleaves.capitalized), category: StringHelperFunctions.getCategoryFromRawData(input:  rawTreeleaves), icon: "biodegradable")
         
-        let facemask = WasteItemModel(wasteType: StringHelperFunctions.getStringBeforeFirstDash(input: rawFacemask.capitalized), category: StringHelperFunctions.getCategoryFromRawData(input:  rawFacemask), icon: "")
+        let facemask = WasteItemModel(wasteType: StringHelperFunctions.getStringBeforeFirstDash(input: rawFacemask.capitalized), category: StringHelperFunctions.getCategoryFromRawData(input:  rawFacemask), icon: "non-biodegradable")
         
-        let plasticBag = WasteItemModel(wasteType: StringHelperFunctions.getStringBeforeFirstDash(input: rawPlasticBag.capitalized), category: StringHelperFunctions.getCategoryFromRawData(input:  rawPlasticBag), icon: "")
+        let plasticBag = WasteItemModel(wasteType: StringHelperFunctions.getStringBeforeFirstDash(input: rawPlasticBag.capitalized), category: StringHelperFunctions.getCategoryFromRawData(input:  rawPlasticBag), icon: "non-biodegradable")
         
         wasteItems.append(aluminium)
         wasteItems.append(cardboard)

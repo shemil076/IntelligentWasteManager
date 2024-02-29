@@ -16,7 +16,7 @@ struct LiveCameraPreview: UIViewControllerRepresentable {
         // Load the ML model
         do {
             let configuration = MLModelConfiguration()
-            let modelContainer = try best20(configuration: configuration) // Use your model's specific initializer
+            let modelContainer = try best1(configuration: configuration) // Use your model's specific initializer
             self.model = try VNCoreMLModel(for: modelContainer.model)
         } catch {
             print("Failed to load the model: \(error)")
