@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A1730B40F9A3916FE678ECD /* Pods_InteligentWasteManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72AFB8A71866161CD914ED5B /* Pods_InteligentWasteManager.framework */; };
 		AD0655B02B8E60D700841D35 /* WasteItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0655AF2B8E60D700841D35 /* WasteItemModel.swift */; };
 		AD0655B52B8E635400841D35 /* WasteItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0655B42B8E635400841D35 /* WasteItemViewModel.swift */; };
+		AD191B9C2B906A3A00880DBD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD191B9B2B906A3A00880DBD /* NetworkManager.swift */; };
+		AD191B9E2B906A6000880DBD /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD191B9D2B906A6000880DBD /* ApiResponse.swift */; };
 		AD23020F2B8F1D78003A19CC /* InstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD23020E2B8F1D78003A19CC /* InstructionView.swift */; };
 		AD3D93D12B890B3D0028444A /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3D93D02B890B3D0028444A /* SplashScreenView.swift */; };
 		AD60B9CE2B8D085F006DF8D0 /* LiveCameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60B9CD2B8D085F006DF8D0 /* LiveCameraPreview.swift */; };
@@ -26,6 +29,8 @@
 		ADD3C9C02B8DD24300BCFBE8 /* IdentifiedWasteItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD3C9BF2B8DD24300BCFBE8 /* IdentifiedWasteItemsView.swift */; };
 		ADD3C9C32B8DD5C200BCFBE8 /* StringHelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD3C9C22B8DD5C200BCFBE8 /* StringHelperFunctions.swift */; };
 		ADEE0AE02B905F8D005CD416 /* best1.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = ADEE0ADF2B905F8D005CD416 /* best1.mlpackage */; };
+		EA237DA2B55AFA772EB4AEBA /* Pods_InteligentWasteManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 819439A26D4859A889B55C2C /* Pods_InteligentWasteManagerTests.framework */; };
+		F01F9A1198663A56FD964C64 /* Pods_InteligentWasteManager_InteligentWasteManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3F11A75988953B003DF9AE /* Pods_InteligentWasteManager_InteligentWasteManagerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +51,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		059960BFAC7E1175702DF3A4 /* Pods-InteligentWasteManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteligentWasteManagerTests.release.xcconfig"; path = "Target Support Files/Pods-InteligentWasteManagerTests/Pods-InteligentWasteManagerTests.release.xcconfig"; sourceTree = "<group>"; };
+		147F635B4E729F67B90F5284 /* Pods-InteligentWasteManager-InteligentWasteManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteligentWasteManager-InteligentWasteManagerUITests.release.xcconfig"; path = "Target Support Files/Pods-InteligentWasteManager-InteligentWasteManagerUITests/Pods-InteligentWasteManager-InteligentWasteManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		51E2D00A6341395206C6D5E7 /* Pods-InteligentWasteManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteligentWasteManager.debug.xcconfig"; path = "Target Support Files/Pods-InteligentWasteManager/Pods-InteligentWasteManager.debug.xcconfig"; sourceTree = "<group>"; };
+		71DF55E3DDFC73AC64897959 /* Pods-InteligentWasteManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteligentWasteManager.release.xcconfig"; path = "Target Support Files/Pods-InteligentWasteManager/Pods-InteligentWasteManager.release.xcconfig"; sourceTree = "<group>"; };
+		72AFB8A71866161CD914ED5B /* Pods_InteligentWasteManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InteligentWasteManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		819439A26D4859A889B55C2C /* Pods_InteligentWasteManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InteligentWasteManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C3F11A75988953B003DF9AE /* Pods_InteligentWasteManager_InteligentWasteManagerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InteligentWasteManager_InteligentWasteManagerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD0655AF2B8E60D700841D35 /* WasteItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteItemModel.swift; sourceTree = "<group>"; };
 		AD0655B42B8E635400841D35 /* WasteItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteItemViewModel.swift; sourceTree = "<group>"; };
+		AD191B9B2B906A3A00880DBD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AD191B9D2B906A6000880DBD /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		AD23020E2B8F1D78003A19CC /* InstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionView.swift; sourceTree = "<group>"; };
 		AD3D93D02B890B3D0028444A /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		AD60B9CD2B8D085F006DF8D0 /* LiveCameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCameraPreview.swift; sourceTree = "<group>"; };
@@ -68,6 +82,8 @@
 		ADD3C9BF2B8DD24300BCFBE8 /* IdentifiedWasteItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiedWasteItemsView.swift; sourceTree = "<group>"; };
 		ADD3C9C22B8DD5C200BCFBE8 /* StringHelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelperFunctions.swift; sourceTree = "<group>"; };
 		ADEE0ADF2B905F8D005CD416 /* best1.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; name = best1.mlpackage; path = ../../wastePileDetection/models/best1.mlpackage; sourceTree = "<group>"; };
+		B4AB1B23FF6A141FE5AC5046 /* Pods-InteligentWasteManager-InteligentWasteManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteligentWasteManager-InteligentWasteManagerUITests.debug.xcconfig"; path = "Target Support Files/Pods-InteligentWasteManager-InteligentWasteManagerUITests/Pods-InteligentWasteManager-InteligentWasteManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE0BAC2CB826709213975AD4 /* Pods-InteligentWasteManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteligentWasteManagerTests.debug.xcconfig"; path = "Target Support Files/Pods-InteligentWasteManagerTests/Pods-InteligentWasteManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A1730B40F9A3916FE678ECD /* Pods_InteligentWasteManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA237DA2B55AFA772EB4AEBA /* Pods_InteligentWasteManagerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,12 +107,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F01F9A1198663A56FD964C64 /* Pods_InteligentWasteManager_InteligentWasteManagerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0695D8BB10C19799BC3E6E27 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51E2D00A6341395206C6D5E7 /* Pods-InteligentWasteManager.debug.xcconfig */,
+				71DF55E3DDFC73AC64897959 /* Pods-InteligentWasteManager.release.xcconfig */,
+				B4AB1B23FF6A141FE5AC5046 /* Pods-InteligentWasteManager-InteligentWasteManagerUITests.debug.xcconfig */,
+				147F635B4E729F67B90F5284 /* Pods-InteligentWasteManager-InteligentWasteManagerUITests.release.xcconfig */,
+				FE0BAC2CB826709213975AD4 /* Pods-InteligentWasteManagerTests.debug.xcconfig */,
+				059960BFAC7E1175702DF3A4 /* Pods-InteligentWasteManagerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AD0655AE2B8E60B200841D35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +141,15 @@
 				AD0655B42B8E635400841D35 /* WasteItemViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AD191B9A2B90683100880DBD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AD191B9B2B906A3A00880DBD /* NetworkManager.swift */,
+				AD191B9D2B906A6000880DBD /* ApiResponse.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		AD3D93CD2B890A570028444A /* Views */ = {
@@ -136,6 +177,8 @@
 				AD7DD2FA2B8796A400594455 /* InteligentWasteManagerTests */,
 				AD7DD3042B8796A400594455 /* InteligentWasteManagerUITests */,
 				AD7DD2E82B8796A200594455 /* Products */,
+				0695D8BB10C19799BC3E6E27 /* Pods */,
+				EA9F396D056F980DC1E8E136 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +195,7 @@
 		AD7DD2E92B8796A200594455 /* InteligentWasteManager */ = {
 			isa = PBXGroup;
 			children = (
+				AD191B9A2B90683100880DBD /* Network */,
 				ADEE0ADF2B905F8D005CD416 /* best1.mlpackage */,
 				AD0655B32B8E633300841D35 /* ViewModel */,
 				AD0655AE2B8E60B200841D35 /* Model */,
@@ -211,6 +255,16 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		EA9F396D056F980DC1E8E136 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72AFB8A71866161CD914ED5B /* Pods_InteligentWasteManager.framework */,
+				9C3F11A75988953B003DF9AE /* Pods_InteligentWasteManager_InteligentWasteManagerUITests.framework */,
+				819439A26D4859A889B55C2C /* Pods_InteligentWasteManagerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,9 +272,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD7DD30B2B8796A400594455 /* Build configuration list for PBXNativeTarget "InteligentWasteManager" */;
 			buildPhases = (
+				8B33C7B843C086E9EC829466 /* [CP] Check Pods Manifest.lock */,
 				AD7DD2E32B8796A200594455 /* Sources */,
 				AD7DD2E42B8796A200594455 /* Frameworks */,
 				AD7DD2E52B8796A200594455 /* Resources */,
+				1B01E89D476AE81171713A7A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,6 +291,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD7DD30E2B8796A400594455 /* Build configuration list for PBXNativeTarget "InteligentWasteManagerTests" */;
 			buildPhases = (
+				E1D7320D99E957E576153222 /* [CP] Check Pods Manifest.lock */,
 				AD7DD2F32B8796A400594455 /* Sources */,
 				AD7DD2F42B8796A400594455 /* Frameworks */,
 				AD7DD2F52B8796A400594455 /* Resources */,
@@ -253,9 +310,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD7DD3112B8796A400594455 /* Build configuration list for PBXNativeTarget "InteligentWasteManagerUITests" */;
 			buildPhases = (
+				F6E53EF460E282E4E9292811 /* [CP] Check Pods Manifest.lock */,
 				AD7DD2FD2B8796A400594455 /* Sources */,
 				AD7DD2FE2B8796A400594455 /* Frameworks */,
 				AD7DD2FF2B8796A400594455 /* Resources */,
+				46B0F6FEDE68C2DDC517A4B5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -336,6 +395,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B01E89D476AE81171713A7A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InteligentWasteManager/Pods-InteligentWasteManager-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InteligentWasteManager/Pods-InteligentWasteManager-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InteligentWasteManager/Pods-InteligentWasteManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46B0F6FEDE68C2DDC517A4B5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InteligentWasteManager-InteligentWasteManagerUITests/Pods-InteligentWasteManager-InteligentWasteManagerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InteligentWasteManager-InteligentWasteManagerUITests/Pods-InteligentWasteManager-InteligentWasteManagerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InteligentWasteManager-InteligentWasteManagerUITests/Pods-InteligentWasteManager-InteligentWasteManagerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B33C7B843C086E9EC829466 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InteligentWasteManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1D7320D99E957E576153222 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InteligentWasteManagerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6E53EF460E282E4E9292811 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InteligentWasteManager-InteligentWasteManagerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AD7DD2E32B8796A200594455 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -346,6 +508,7 @@
 				AD23020F2B8F1D78003A19CC /* InstructionView.swift in Sources */,
 				AD0655B02B8E60D700841D35 /* WasteItemModel.swift in Sources */,
 				AD7DD2EB2B8796A200594455 /* InteligentWasteManagerApp.swift in Sources */,
+				AD191B9E2B906A6000880DBD /* ApiResponse.swift in Sources */,
 				AD60B9CE2B8D085F006DF8D0 /* LiveCameraPreview.swift in Sources */,
 				ADD3C9BE2B8DC55D00BCFBE8 /* ListItem.swift in Sources */,
 				ADD3C9C02B8DD24300BCFBE8 /* IdentifiedWasteItemsView.swift in Sources */,
@@ -353,6 +516,7 @@
 				AD3D93D12B890B3D0028444A /* SplashScreenView.swift in Sources */,
 				AD0655B52B8E635400841D35 /* WasteItemViewModel.swift in Sources */,
 				ADD3C9C32B8DD5C200BCFBE8 /* StringHelperFunctions.swift in Sources */,
+				AD191B9C2B906A3A00880DBD /* NetworkManager.swift in Sources */,
 				AD60B9D02B8D0ADB006DF8D0 /* best20.mlpackage in Sources */,
 				ADEE0AE02B905F8D005CD416 /* best1.mlpackage in Sources */,
 			);
@@ -512,6 +676,7 @@
 		};
 		AD7DD30C2B8796A400594455 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51E2D00A6341395206C6D5E7 /* Pods-InteligentWasteManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -520,6 +685,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"InteligentWasteManager/Preview Content\"";
 				DEVELOPMENT_TEAM = 7S4934LSLZ;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to the camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -542,6 +708,7 @@
 		};
 		AD7DD30D2B8796A400594455 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71DF55E3DDFC73AC64897959 /* Pods-InteligentWasteManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -550,6 +717,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"InteligentWasteManager/Preview Content\"";
 				DEVELOPMENT_TEAM = 7S4934LSLZ;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to the camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -572,6 +740,7 @@
 		};
 		AD7DD30F2B8796A400594455 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE0BAC2CB826709213975AD4 /* Pods-InteligentWasteManagerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -591,6 +760,7 @@
 		};
 		AD7DD3102B8796A400594455 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 059960BFAC7E1175702DF3A4 /* Pods-InteligentWasteManagerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -610,6 +780,7 @@
 		};
 		AD7DD3122B8796A400594455 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4AB1B23FF6A141FE5AC5046 /* Pods-InteligentWasteManager-InteligentWasteManagerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -627,6 +798,7 @@
 		};
 		AD7DD3132B8796A400594455 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 147F635B4E729F67B90F5284 /* Pods-InteligentWasteManager-InteligentWasteManagerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

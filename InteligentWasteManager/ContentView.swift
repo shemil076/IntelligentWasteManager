@@ -9,9 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     var features = ["Open Camera", "Upload Video", "Upload Image"]
-    var mainImages = ["Waste management-bro", "Waste management-cuate", "Waste management-pana", "Waste management-rafiki", "wasteManagementPurple"  ]
+    var mainImages = ["Waste management-bro", "Waste management-cuate", "Waste management-rafiki", "wasteManagementPurple"  ]
+    @StateObject var networkManager = NetworkManager()
     
     var body: some View {
+        
+        
+//        VStack {
+//            Text(networkManager.dataFromApi.message)
+//                        .padding()
+//                    Button("Fetch Data") {
+//                        networkManager.fetchData(from: "http://192.168.8.120:5000/data")
+//                        print(networkManager.dataFromApi.message)
+//                        print("fuck")
+//                        networkManager.sendSimpleTextMessage()
+//                    }
+//                }
         
         NavigationStack{
             ZStack{

@@ -11,6 +11,7 @@ struct SliderButton: View {
     
     let feature : String
     @State private var isShowingCameraView = false
+    let networkManager = NetworkManager()
     var body: some View {
         Button(action: {
             isShowingCameraView = true
