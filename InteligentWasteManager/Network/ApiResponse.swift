@@ -10,3 +10,7 @@ import Foundation
 struct ApiResponse: Codable {
     var message: String
 }
+
+struct DetectionResult: Decodable {
+    let detectedClasses: [String]
+}

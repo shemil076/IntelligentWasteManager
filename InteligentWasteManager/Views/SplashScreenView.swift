@@ -16,7 +16,7 @@ struct SplashScreenView: View {
             Spacer()
             
             VStack(alignment: .leading, spacing: 10, content: {
-                Text("Sort smart")
+                Text("Sort Smart")
                     .font(.custom("" ,size: 63))
                     .foregroundColor(.white)
                 

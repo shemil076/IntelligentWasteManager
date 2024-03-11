@@ -8,17 +8,8 @@
 import SwiftUI
 
 struct IdentifiedWasteItemsView: View {
-
-    var wasteItemViewModel : WasteItemViewModel
-    
-//    init() {
-//        let navBarAppearance = UINavigationBarAppearance()
-//        navBarAppearance.configureWithOpaqueBackground()
-//        navBarAppearance.backgroundColor = UIColor.orange
-//        UINavigationBar.appearance().standardAppearance = navBarAppearance
-//        UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
-//    }
-
+    @EnvironmentObject var wasteItemViewModel : WasteItemViewModel
+    @EnvironmentObject var netWorkManager : NetworkManager
     
     var body: some View {
         NavigationStack{
@@ -46,9 +37,12 @@ struct IdentifiedWasteItemsView: View {
             }
             
         }.background(Color.black)
+            .onAppear {
+                UtilFunctions.createWasteObjects(netWorkManager: netWorkManager)
+            }
     }
 }
 
 #Preview {
-    IdentifiedWasteItemsView(wasteItemViewModel: WasteItemViewModel())
+    IdentifiedWasteItemsView()
 }

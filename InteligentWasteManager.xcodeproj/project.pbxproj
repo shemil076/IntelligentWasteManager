@@ -15,7 +15,6 @@
 		AD23020F2B8F1D78003A19CC /* InstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD23020E2B8F1D78003A19CC /* InstructionView.swift */; };
 		AD3D93D12B890B3D0028444A /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3D93D02B890B3D0028444A /* SplashScreenView.swift */; };
 		AD60B9CE2B8D085F006DF8D0 /* LiveCameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60B9CD2B8D085F006DF8D0 /* LiveCameraPreview.swift */; };
-		AD60B9D02B8D0ADB006DF8D0 /* best20.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = AD60B9CF2B8D0ADB006DF8D0 /* best20.mlpackage */; };
 		AD7DD2EB2B8796A200594455 /* InteligentWasteManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7DD2EA2B8796A200594455 /* InteligentWasteManagerApp.swift */; };
 		AD7DD2ED2B8796A200594455 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7DD2EC2B8796A200594455 /* ContentView.swift */; };
 		AD7DD2EF2B8796A400594455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7DD2EE2B8796A400594455 /* Assets.xcassets */; };
@@ -25,10 +24,15 @@
 		AD7DD3082B8796A400594455 /* InteligentWasteManagerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7DD3072B8796A400594455 /* InteligentWasteManagerUITestsLaunchTests.swift */; };
 		AD847FDD2B89E30400E76D0E /* SliderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD847FDC2B89E30400E76D0E /* SliderButton.swift */; };
 		AD847FDF2B89F62D00E76D0E /* SlideShowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD847FDE2B89F62D00E76D0E /* SlideShowViewModel.swift */; };
+		AD8D53C22B9D9943003BD4C0 /* DetectedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8D53C12B9D9943003BD4C0 /* DetectedObject.swift */; };
+		AD8D53C42B9E4D0E003BD4C0 /* DetectedObjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8D53C32B9E4D0E003BD4C0 /* DetectedObjectViewModel.swift */; };
+		AD8D53C62B9E5389003BD4C0 /* UtilFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8D53C52B9E5389003BD4C0 /* UtilFunctions.swift */; };
+		AD9DF30C2B9EC89800D1A97E /* CameraContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9DF30B2B9EC89800D1A97E /* CameraContainerView.swift */; };
+		AD9DF30E2B9EC8C700D1A97E /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9DF30D2B9EC8C700D1A97E /* NavigationViewModel.swift */; };
+		AD9DF3102B9EF9B400D1A97E /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9DF30F2B9EF9B400D1A97E /* AppDependencyContainer.swift */; };
 		ADD3C9BE2B8DC55D00BCFBE8 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD3C9BD2B8DC55D00BCFBE8 /* ListItem.swift */; };
 		ADD3C9C02B8DD24300BCFBE8 /* IdentifiedWasteItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD3C9BF2B8DD24300BCFBE8 /* IdentifiedWasteItemsView.swift */; };
 		ADD3C9C32B8DD5C200BCFBE8 /* StringHelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD3C9C22B8DD5C200BCFBE8 /* StringHelperFunctions.swift */; };
-		ADEE0AE02B905F8D005CD416 /* best1.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = ADEE0ADF2B905F8D005CD416 /* best1.mlpackage */; };
 		EA237DA2B55AFA772EB4AEBA /* Pods_InteligentWasteManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 819439A26D4859A889B55C2C /* Pods_InteligentWasteManagerTests.framework */; };
 		F01F9A1198663A56FD964C64 /* Pods_InteligentWasteManager_InteligentWasteManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3F11A75988953B003DF9AE /* Pods_InteligentWasteManager_InteligentWasteManagerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -65,7 +69,6 @@
 		AD23020E2B8F1D78003A19CC /* InstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionView.swift; sourceTree = "<group>"; };
 		AD3D93D02B890B3D0028444A /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		AD60B9CD2B8D085F006DF8D0 /* LiveCameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCameraPreview.swift; sourceTree = "<group>"; };
-		AD60B9CF2B8D0ADB006DF8D0 /* best20.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; name = best20.mlpackage; path = ../../wastePileDetection/models/best20.mlpackage; sourceTree = "<group>"; };
 		AD7DD2E72B8796A200594455 /* InteligentWasteManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteligentWasteManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7DD2EA2B8796A200594455 /* InteligentWasteManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteligentWasteManagerApp.swift; sourceTree = "<group>"; };
 		AD7DD2EC2B8796A200594455 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,10 +81,15 @@
 		AD7DD3072B8796A400594455 /* InteligentWasteManagerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteligentWasteManagerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AD847FDC2B89E30400E76D0E /* SliderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderButton.swift; sourceTree = "<group>"; };
 		AD847FDE2B89F62D00E76D0E /* SlideShowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideShowViewModel.swift; sourceTree = "<group>"; };
+		AD8D53C12B9D9943003BD4C0 /* DetectedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectedObject.swift; sourceTree = "<group>"; };
+		AD8D53C32B9E4D0E003BD4C0 /* DetectedObjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectedObjectViewModel.swift; sourceTree = "<group>"; };
+		AD8D53C52B9E5389003BD4C0 /* UtilFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilFunctions.swift; sourceTree = "<group>"; };
+		AD9DF30B2B9EC89800D1A97E /* CameraContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraContainerView.swift; sourceTree = "<group>"; };
+		AD9DF30D2B9EC8C700D1A97E /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
+		AD9DF30F2B9EF9B400D1A97E /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
 		ADD3C9BD2B8DC55D00BCFBE8 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		ADD3C9BF2B8DD24300BCFBE8 /* IdentifiedWasteItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiedWasteItemsView.swift; sourceTree = "<group>"; };
 		ADD3C9C22B8DD5C200BCFBE8 /* StringHelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelperFunctions.swift; sourceTree = "<group>"; };
-		ADEE0ADF2B905F8D005CD416 /* best1.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; name = best1.mlpackage; path = ../../wastePileDetection/models/best1.mlpackage; sourceTree = "<group>"; };
 		B4AB1B23FF6A141FE5AC5046 /* Pods-InteligentWasteManager-InteligentWasteManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteligentWasteManager-InteligentWasteManagerUITests.debug.xcconfig"; path = "Target Support Files/Pods-InteligentWasteManager-InteligentWasteManagerUITests/Pods-InteligentWasteManager-InteligentWasteManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FE0BAC2CB826709213975AD4 /* Pods-InteligentWasteManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteligentWasteManagerTests.debug.xcconfig"; path = "Target Support Files/Pods-InteligentWasteManagerTests/Pods-InteligentWasteManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				AD0655AF2B8E60D700841D35 /* WasteItemModel.swift */,
+				AD8D53C12B9D9943003BD4C0 /* DetectedObject.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				AD0655B42B8E635400841D35 /* WasteItemViewModel.swift */,
+				AD8D53C32B9E4D0E003BD4C0 /* DetectedObjectViewModel.swift */,
+				AD9DF30D2B9EC8C700D1A97E /* NavigationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -159,6 +170,7 @@
 				AD60B9CD2B8D085F006DF8D0 /* LiveCameraPreview.swift */,
 				ADD3C9BF2B8DD24300BCFBE8 /* IdentifiedWasteItemsView.swift */,
 				AD23020E2B8F1D78003A19CC /* InstructionView.swift */,
+				AD9DF30B2B9EC89800D1A97E /* CameraContainerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,12 +208,10 @@
 			isa = PBXGroup;
 			children = (
 				AD191B9A2B90683100880DBD /* Network */,
-				ADEE0ADF2B905F8D005CD416 /* best1.mlpackage */,
 				AD0655B32B8E633300841D35 /* ViewModel */,
 				AD0655AE2B8E60B200841D35 /* Model */,
 				AD847FDB2B89E1F800E76D0E /* Components */,
 				ADD3C9C12B8DD58E00BCFBE8 /* Utils */,
-				AD60B9CF2B8D0ADB006DF8D0 /* best20.mlpackage */,
 				AD3D93D22B89138F0028444A /* Shapes */,
 				AD3D93CD2B890A570028444A /* Views */,
 				AD7DD2EA2B8796A200594455 /* InteligentWasteManagerApp.swift */,
@@ -251,6 +261,8 @@
 			isa = PBXGroup;
 			children = (
 				ADD3C9C22B8DD5C200BCFBE8 /* StringHelperFunctions.swift */,
+				AD8D53C52B9E5389003BD4C0 /* UtilFunctions.swift */,
+				AD9DF30F2B9EF9B400D1A97E /* AppDependencyContainer.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -505,7 +517,11 @@
 			files = (
 				AD847FDD2B89E30400E76D0E /* SliderButton.swift in Sources */,
 				AD7DD2ED2B8796A200594455 /* ContentView.swift in Sources */,
+				AD9DF3102B9EF9B400D1A97E /* AppDependencyContainer.swift in Sources */,
 				AD23020F2B8F1D78003A19CC /* InstructionView.swift in Sources */,
+				AD9DF30E2B9EC8C700D1A97E /* NavigationViewModel.swift in Sources */,
+				AD9DF30C2B9EC89800D1A97E /* CameraContainerView.swift in Sources */,
+				AD8D53C22B9D9943003BD4C0 /* DetectedObject.swift in Sources */,
 				AD0655B02B8E60D700841D35 /* WasteItemModel.swift in Sources */,
 				AD7DD2EB2B8796A200594455 /* InteligentWasteManagerApp.swift in Sources */,
 				AD191B9E2B906A6000880DBD /* ApiResponse.swift in Sources */,
@@ -513,12 +529,12 @@
 				ADD3C9BE2B8DC55D00BCFBE8 /* ListItem.swift in Sources */,
 				ADD3C9C02B8DD24300BCFBE8 /* IdentifiedWasteItemsView.swift in Sources */,
 				AD847FDF2B89F62D00E76D0E /* SlideShowViewModel.swift in Sources */,
+				AD8D53C42B9E4D0E003BD4C0 /* DetectedObjectViewModel.swift in Sources */,
 				AD3D93D12B890B3D0028444A /* SplashScreenView.swift in Sources */,
 				AD0655B52B8E635400841D35 /* WasteItemViewModel.swift in Sources */,
+				AD8D53C62B9E5389003BD4C0 /* UtilFunctions.swift in Sources */,
 				ADD3C9C32B8DD5C200BCFBE8 /* StringHelperFunctions.swift in Sources */,
 				AD191B9C2B906A3A00880DBD /* NetworkManager.swift in Sources */,
-				AD60B9D02B8D0ADB006DF8D0 /* best20.mlpackage in Sources */,
-				ADEE0AE02B905F8D005CD416 /* best1.mlpackage in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,7 +798,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B4AB1B23FF6A141FE5AC5046 /* Pods-InteligentWasteManager-InteligentWasteManagerUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -800,7 +815,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 147F635B4E729F67B90F5284 /* Pods-InteligentWasteManager-InteligentWasteManagerUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

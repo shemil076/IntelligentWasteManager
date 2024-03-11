@@ -8,8 +8,10 @@
 import Foundation
 import Observation
 
-@Observable class WasteItemViewModel{
-    var wasteItems : [WasteItemModel] = []
+
+
+class WasteItemViewModel : ObservableObject{
+    @Published var wasteItems : [WasteItemModel] = []
     
     
 //    =======================================> REMOVE EVERYTHING BELOW UNTIL YOU MEET THE NEXT LINE ==========>
@@ -67,3 +69,5 @@ import Observation
   
     
 }
+
+

@@ -21,11 +21,20 @@ enum WasteCategory : String, CaseIterable{
     case nonBiodegradable = "Non-Biodegradable"
 }
 
+struct Box: Decodable {
+    let x1: Double
+    let y1: Double
+    let x2: Double
+    let y2: Double
+}
+
 @Observable class WasteItemModel: Identifiable{
     let id : String = UUID().uuidString
     var wasteType : String = ""
     let category : WasteCategory
     var icon : String = ""
+    let confidence: Double = 0.0
+//    let box: Box? = nil
     
     
     init(wasteType : String, category: WasteCategory, icon: String) {

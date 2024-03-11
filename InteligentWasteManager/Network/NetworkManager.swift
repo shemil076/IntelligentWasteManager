@@ -6,128 +6,113 @@
 //
 
 
+
+
 import Foundation
-import Starscream
+import SocketIO
 
-class NetworkManager: ObservableObject, WebSocketDelegate {
-
+class NetworkManager: ObservableObject {
     @Published var dataFromApi = ApiResponse(message: "")
     @Published var isConnected = false
-    var socket: WebSocket?
+    @Published var detectedClasses = []
+    @Published var detectedObjects : [DetectedObject] = []
+    
+    
+    
+    lazy var wasteViewModel: WasteItemViewModel = AppDependencyContainer.shared.wasteItemViewModel
+    
+    private let manager: SocketManager
+    private var socket: SocketIOClient
+    
     
     init() {
-        connectToWebSocket()
+        // Configure Socket.IO manager
+        //        let url = URL(string: "ws://192.168.8.120:5000")!
+        let url = URL(string: "ws://192.168.8.120:5000")!
+        manager = SocketManager(socketURL: url, config: [.log(true), .compress])
+        socket = manager.defaultSocket
+        setupSocketEvents()
+        socket.connect()
+        
     }
     
-    func fetchData(from urlString: String) {
-        guard let url = URL(string: urlString) else {
-            print("Invalid URL")
-            return
+    //    func fetchData(from urlString: String) {
+    //        // ... (Your existing code remains the same) ...
+    //    }
+    
+    private func setupSocketEvents() {
+        socket.on(clientEvent: .connect) { [weak self] _, _ in
+            self?.isConnected = true
+            print("WebSocket connected")
         }
-
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            if let data = data {
-                if let decodedResponse = try? JSONDecoder().decode(ApiResponse.self, from: data) {
-                    DispatchQueue.main.async {
-                        self.dataFromApi = decodedResponse
+        
+        socket.on(clientEvent: .disconnect) { [weak self] data, ack in
+            self?.isConnected = false
+            if let reason = data.first as? String {
+                print("WebSocket disconnected: \(reason)")
+            }
+        }
+        
+        
+        socket.on("detection_result") { data, _ in
+            guard let results = data as? [[String: Any]],
+                  let detectedObjectsString = results.first?["detected_objects"] as? String,
+                  let detectedObjectsData = detectedObjectsString.data(using: .utf8) else {
+                return
+            }
+            
+            do {
+                let detectedObjects = try JSONDecoder().decode([DetectedObject].self, from: detectedObjectsData)
+                
+                
+                DispatchQueue.main.async {
+                    let detectedClasses = detectedObjects.map { ($0.name, $0.class, $0.box, $0.confidence) }
+                    self.detectedClasses = detectedClasses
+                    
+                    detectedClasses.forEach { (name, class, box, confidence) in
+                        self.wasteViewModel.addNewWasteItem(wastType: StringHelperFunctions.getStringAfterFirstDash(input: name),
+                                                            category: StringHelperFunctions.getCategoryFromRawData(input: name),
+                                                            icon: name)
                     }
                 }
-            } else {
-                print("Fetch failed: \(error?.localizedDescription ?? "Unknown error")")
+                
+                self.detectedClasses.forEach { item in
+                    print("Printing the item", item)
+                }
+                
+                print("The response is ", detectedObjects)
+            } catch {
+                print("Error decoding detected objects: \(error)")
             }
-        }.resume()
-    }
-    
-    func connectToWebSocket() {
-        guard let url = URL(string: "ws://192.168.8.120:5000/socket.io/?EIO=4&transport=websocket") else {
-            print("WebSocket URL is invalid")
-            return
         }
         
-        var request = URLRequest(url: url)
-        request.timeoutInterval = 5
-
         
-        socket = WebSocket(request: request)
-//        socket?.onEvent = { event in
-//            print("WebSocket Event:", event)
-//            switch event {
-//            case .connected(let headers):
-//                print("WebSocket connected with headers: \(headers)")
-//            case .disconnected(let reason, let code):
-//                print("WebSocket disconnected with reason: \(reason) and code: \(code)")
-//            case .text(let string):
-//                print("Received text: \(string)")
-//            case .binary(let data):
-//                print("Received data: \(data)")
-//            case .ping(_), .pong(_), .viabilityChanged(_), .reconnectSuggested(_), .cancelled, .error(_):
-//                break // Handle these events as needed
-//            case .peerClosed:
-//                print("HI")
-//            }
-//        }
-        
-        socket?.onEvent = { [weak self] event in
-                   switch event {
-                   case .connected(_):
-                       self?.isConnected = true
-                       print("WebSocket connected")
-                   case .disconnected(let reason, _):
-                       self?.isConnected = false
-                       print("WebSocket disconnected: \(reason)")
-                   default:
-                       break // Handle other events as needed
-                   }
-               }
-//        socket?.delegate = self
-        socket?.connect()
     }
-    
-    
-//    func sendFrame( imageData: Data) {
-//        // Assuming `socket` is a `WebSocket` instance and it's connected
-//        let dataString = imageData.base64EncodedString() // Convert to base64 if sending as text
-//        socket?.write(string: "{\"event\": \"frame\", \"data\": \"\(dataString)\"}") // Adjust based on how you plan to encode and send the data
-//    }
-
     
     func sendFrame(_ imageData: Data) {
-            guard isConnected else { return }
-            let dataString = imageData.base64EncodedString()
-            print("{\"event\": \"frame\", \"data\": \"\(dataString)\"}")
-            socket?.write(string: "{\"event\": \"frame\", \"data\": \"\(dataString)\"}")
+        guard isConnected else { return }
+        let dataString = imageData.base64EncodedString()
+        socket.emit("frame", ["data": dataString]) // Event name and data payload
     }
     
-    func didReceive(event: Starscream.WebSocketEvent, client: Starscream.WebSocketClient) {
-        switch event {
-                   case .connected(let headers):
-                       isConnected = true
-                       print("websocket is connected: \(headers)")
-                   case .disconnected(let reason, let code):
-                       isConnected = false
-                       print("websocket is disconnected: \(reason) with code: \(code)")
-                   case .text(let string):
-                       print("Received text: \(string)")
-                   case .binary(let data):
-                       print("Received data: \(data.count)")
-                   case .ping(_):
-                       break
-                   case .pong(_):
-                       break
-                   case .viabilityChanged(_):
-                       break
-                   case .reconnectSuggested(_):
-                       break
-                   case .cancelled:
-                       isConnected = false
-                   case .error(let error):
-                       isConnected = false
-                       print(error!)
-        case .peerClosed: break
-            
+    func sendMessage(_ message: String) {
+        guard isConnected else {
+            print("WebSocket is not connected.")
+            return
         }
+        socket.emit("message", message)
     }
 }
 
 
-
+extension WasteItemViewModel {
+    // Add a function to process DetectedObjects and add them to the wasteItems
+    func processDetectedObjects(detectedObjects: [DetectedObject]) {
+        for object in detectedObjects {
+            let wasteType = StringHelperFunctions.getStringBeforeFirstDash(input: object.name)
+            let category = StringHelperFunctions.getCategoryFromRawData(input: object.name)
+            let icon = "" // Determine the icon based on the category or other logic
+            addNewWasteItem(wastType: wasteType, category: category, icon: icon)
+        }
+    }
+}
