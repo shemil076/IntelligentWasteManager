@@ -11,15 +11,15 @@ import SwiftUI
 struct InteligentWasteManagerApp: App {
     @State private var isActive: Bool = false
     
-    var networkManager = NetworkManager()
-
-     var body: some Scene {
-         WindowGroup {
-             if isActive {
-                 ContentView().environmentObject(networkManager).environmentObject(AppDependencyContainer.shared.wasteItemViewModel)
-             } else {
-                 SplashScreenView(isActive: $isActive)
-             }
-         }
-     }
+    
+    var body: some Scene {
+        WindowGroup {
+            if isActive {
+                ContentView()
+                    .environmentObject(AppDependencyContainer.shared.networkManager).environmentObject(AppDependencyContainer.shared.wasteItemViewModel)
+            } else {
+                SplashScreenView(isActive: $isActive)
+            }
+        }
+    }
 }

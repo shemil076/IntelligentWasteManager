@@ -7,7 +7,6 @@
 
 import SwiftUI
 import AVFoundation
-//import Starscream
 
 struct LiveCameraPreview: UIViewControllerRepresentable {
     @ObservedObject var navigationViewModel: NavigationViewModel
@@ -45,7 +44,42 @@ struct LiveCameraPreview: UIViewControllerRepresentable {
 class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
-    let networkManager = NetworkManager() // Instance to manage WebSocket connection
+    
+    lazy var networkManager : NetworkManager = AppDependencyContainer.shared.networkManager
+    
+    var boundingBoxOverlay : UIView!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupBoundingBoxOverlay()
+        setupAVCapture()
+        observeDetectionResults()
+    }
+    
+    private func observeDetectionResults(){
+        NotificationCenter.default.addObserver(self, selector: #selector(handleDetectionResults(notification:)), name: .didReceiveDetectionResults, object: nil)
+        
+    }
+    
+    @objc func handleDetectionResults(notification : Notification){
+        guard let userInfo = notification.userInfo,
+              let detectedObjects = userInfo["detectedObjects"] as? [DetectedObject] else {return}
+        
+        //        let detectionResultsString = convertDetectedObjectsToString(detectedObjects: detectedObjects)
+        DispatchQueue.main.async { [weak self] in
+            self?.drawBoundingBoxes()
+        }
+    }
+    
+    private func convertDetectedObjectsToString(detectedObjects: [DetectedObject]) -> String {
+        // Implement conversion logic based on your DetectedObject structure
+        // and the expected format for drawBoundingBoxes
+        
+        
+        return ""
+    }
+    
     
     func setupAVCapture() {
         
@@ -72,12 +106,61 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         self.view.layer.addSublayer(videoPreviewLayer!)
         
         captureSession.startRunning()
+        
+        setupBoundingBoxOverlay()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         videoPreviewLayer?.frame = self.view.bounds
+        boundingBoxOverlay.frame = self.view.bounds
     }
+    
+    func setupBoundingBoxOverlay(){
+        boundingBoxOverlay = UIView(frame: view.bounds)
+        boundingBoxOverlay.backgroundColor = .clear
+        view.addSubview(boundingBoxOverlay)
+        view.bringSubviewToFront(boundingBoxOverlay)
+    }
+    
+    func drawBoundingBoxes(){
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.boundingBoxOverlay.subviews.forEach { $0.removeFromSuperview() }
+            
+            let viewSize = self.boundingBoxOverlay.bounds.size
+            for detectedObject in self.networkManager.detectedObjectsList {
+                let box = detectedObject.box
+                let imageSize = CGSize(width: 640, height: 480) // Example; replace with actual detection image size
+                let rect = self.scaleAndTranslate(box: box, fromImageSize: imageSize, toViewSize: viewSize)
+                let boundingBoxView = UIView(frame: rect)
+                boundingBoxView.layer.borderColor = UIColor.red.cgColor
+                boundingBoxView.layer.borderWidth = 2.0
+                self.boundingBoxOverlay.addSubview(boundingBoxView)
+            }
+        }
+    }
+
+
+    
+    func parseDetectionResult(detectionResult: String) -> [DetectedObject] {
+        return []
+    }
+    
+    func scaleAndTranslate(box: DetectedObject.Box, fromImageSize imageSize: CGSize, toViewSize viewSize: CGSize) -> CGRect {
+        // Calculate scale factors
+        let scaleX = viewSize.width / imageSize.width
+        let scaleY = viewSize.height / imageSize.height
+        
+        // Scale and translate box coordinates
+        let x1 = box.x1 * scaleX
+        let y1 = box.y1 * scaleY
+        let x2 = box.x2 * scaleX
+        let y2 = box.y2 * scaleY
+        
+        return CGRect(x: x1, y: y1, width: x2 - x1, height: y2 - y1)
+    }
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -98,6 +181,11 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         // Send the frame over WebSocket
         print()
         networkManager.sendFrame(imageData)
+    }
+    
+    // Remove the view controller as an observer when it's being deallocated
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }
 

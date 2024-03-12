@@ -11,6 +11,8 @@ class AppDependencyContainer {
     static let shared = AppDependencyContainer()
 
     let wasteItemViewModel = WasteItemViewModel()
+    
+    let networkManager = NetworkManager()
 
     private init() {}
 }

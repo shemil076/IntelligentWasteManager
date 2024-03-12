@@ -23,7 +23,7 @@ class WasteItemViewModel : ObservableObject{
 //    PLEASE REMOVE THIS FUCNTION AFTER INTEGRATING THE
     
     init(){
-        getInitialWasteItems()
+//        getInitialWasteItems()
     }
     
     let rawAluminium = "aluminum - Non_biodegradable-Recyclable"
@@ -59,10 +59,12 @@ class WasteItemViewModel : ObservableObject{
 //==========================================================>
     
     
-    func addNewWasteItem(wastType : String, category : WasteCategory, icon : String){
-        let newWasteItem = WasteItemModel(wasteType: wastType, category: category, icon: icon)
+    func addNewWasteItem(wasteType : String, category : WasteCategory, icon : String){
+        let newWasteItem = WasteItemModel(wasteType: wasteType, category: category, icon: icon)
         
-        wasteItems.append(newWasteItem)
+        if !wasteItems.contains(where: { $0.wasteType == wasteType }) {
+                wasteItems.append(newWasteItem)
+            }
     }
     
     

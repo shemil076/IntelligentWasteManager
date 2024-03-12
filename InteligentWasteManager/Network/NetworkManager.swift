@@ -15,7 +15,7 @@ class NetworkManager: ObservableObject {
     @Published var dataFromApi = ApiResponse(message: "")
     @Published var isConnected = false
     @Published var detectedClasses = []
-    @Published var detectedObjects : [DetectedObject] = []
+    @Published var detectedObjectsList : [DetectedObject] = []
     
     
     
@@ -70,17 +70,18 @@ class NetworkManager: ObservableObject {
                     self.detectedClasses = detectedClasses
                     
                     detectedClasses.forEach { (name, class, box, confidence) in
-                        self.wasteViewModel.addNewWasteItem(wastType: StringHelperFunctions.getStringAfterFirstDash(input: name),
+                        self.wasteViewModel.addNewWasteItem(wasteType: StringHelperFunctions.getStringBeforeFirstDash(input: name).capitalized,
                                                             category: StringHelperFunctions.getCategoryFromRawData(input: name),
                                                             icon: name)
                     }
-                }
+                    
+                    self.detectedObjectsList = detectedObjects
+                    
+                    NotificationCenter.default.post(name: .didReceiveDetectionResults, object: nil, userInfo: ["detectedObjects": detectedObjects])
                 
-                self.detectedClasses.forEach { item in
-                    print("Printing the item", item)
                 }
+                              
                 
-                print("The response is ", detectedObjects)
             } catch {
                 print("Error decoding detected objects: \(error)")
             }
@@ -112,7 +113,11 @@ extension WasteItemViewModel {
             let wasteType = StringHelperFunctions.getStringBeforeFirstDash(input: object.name)
             let category = StringHelperFunctions.getCategoryFromRawData(input: object.name)
             let icon = "" // Determine the icon based on the category or other logic
-            addNewWasteItem(wastType: wasteType, category: category, icon: icon)
+            addNewWasteItem(wasteType: wasteType, category: category, icon: icon)
         }
     }
+}
+
+extension Notification.Name {
+    static let didReceiveDetectionResults = Notification.Name("didReceiveDetectionResults")
 }
