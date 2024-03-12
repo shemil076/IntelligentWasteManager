@@ -27,7 +27,6 @@ class NetworkManager: ObservableObject {
     
     init() {
         // Configure Socket.IO manager
-        //        let url = URL(string: "ws://192.168.8.120:5000")!
         let url = URL(string: "ws://192.168.8.120:5000")!
         manager = SocketManager(socketURL: url, config: [.log(true), .compress])
         socket = manager.defaultSocket
@@ -36,9 +35,6 @@ class NetworkManager: ObservableObject {
         
     }
     
-    //    func fetchData(from urlString: String) {
-    //        // ... (Your existing code remains the same) ...
-    //    }
     
     private func setupSocketEvents() {
         socket.on(clientEvent: .connect) { [weak self] _, _ in
@@ -102,19 +98,6 @@ class NetworkManager: ObservableObject {
             return
         }
         socket.emit("message", message)
-    }
-}
-
-
-extension WasteItemViewModel {
-    // Add a function to process DetectedObjects and add them to the wasteItems
-    func processDetectedObjects(detectedObjects: [DetectedObject]) {
-        for object in detectedObjects {
-            let wasteType = StringHelperFunctions.getStringBeforeFirstDash(input: object.name)
-            let category = StringHelperFunctions.getCategoryFromRawData(input: object.name)
-            let icon = "" // Determine the icon based on the category or other logic
-            addNewWasteItem(wasteType: wasteType, category: category, icon: icon)
-        }
     }
 }
 

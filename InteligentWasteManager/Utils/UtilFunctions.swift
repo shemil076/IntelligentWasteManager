@@ -8,10 +8,4 @@
 import Foundation
 
 class UtilFunctions {
-    
-    static func createWasteObjects(netWorkManager : NetworkManager){
-        
-        
-        print("I found the detected class", netWorkManager.detectedClasses)
-    }
 }

@@ -9,7 +9,6 @@ import SwiftUI
 
 // ViewModel to manage the slideshow
 class SlideShowViewModel: ObservableObject {
-    // Published property to change the current image index
     @Published var currentIndex = 0
     private var timer: Timer?
     private let imagesCount: Int
@@ -41,7 +40,7 @@ class SlideShowViewModel: ObservableObject {
 
 struct SlideShowView: View {
     @StateObject private var viewModel: SlideShowViewModel
-    private let images: [String] // Assuming the images are identified by their names in your assets
+    private let images: [String]
 
     init(images: [String], interval: TimeInterval = 3.0) {
         self.images = images

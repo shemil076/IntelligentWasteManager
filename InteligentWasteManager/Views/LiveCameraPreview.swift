@@ -64,21 +64,13 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     @objc func handleDetectionResults(notification : Notification){
         guard let userInfo = notification.userInfo,
-              let detectedObjects = userInfo["detectedObjects"] as? [DetectedObject] else {return}
+              let _ = userInfo["detectedObjects"] as? [DetectedObject] else {return}
         
-        //        let detectionResultsString = convertDetectedObjectsToString(detectedObjects: detectedObjects)
         DispatchQueue.main.async { [weak self] in
             self?.drawBoundingBoxes()
         }
     }
-    
-    private func convertDetectedObjectsToString(detectedObjects: [DetectedObject]) -> String {
-        // Implement conversion logic based on your DetectedObject structure
-        // and the expected format for drawBoundingBoxes
-        
-        
-        return ""
-    }
+
     
     
     func setupAVCapture() {
@@ -131,7 +123,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             let viewSize = self.boundingBoxOverlay.bounds.size
             for detectedObject in self.networkManager.detectedObjectsList {
                 let box = detectedObject.box
-                let imageSize = CGSize(width: 640, height: 480) // Example; replace with actual detection image size
+                let imageSize = CGSize(width: 640, height: 480)
                 let rect = self.scaleAndTranslate(box: box, fromImageSize: imageSize, toViewSize: viewSize)
                 let boundingBoxView = UIView(frame: rect)
                 boundingBoxView.layer.borderColor = UIColor.red.cgColor
@@ -141,11 +133,6 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         }
     }
 
-
-    
-    func parseDetectionResult(detectionResult: String) -> [DetectedObject] {
-        return []
-    }
     
     func scaleAndTranslate(box: DetectedObject.Box, fromImageSize imageSize: CGSize, toViewSize viewSize: CGSize) -> CGRect {
         // Calculate scale factors

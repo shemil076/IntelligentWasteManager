@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SplashScreenView: View {
-    // This binding variable will control the navigation to the main content
     @Binding var isActive: Bool
     
     var body: some View {

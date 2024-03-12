@@ -37,9 +37,6 @@ struct IdentifiedWasteItemsView: View {
             }
             
         }.background(Color.black)
-            .onAppear {
-                UtilFunctions.createWasteObjects(netWorkManager: netWorkManager)
-            }
     }
 }
 
