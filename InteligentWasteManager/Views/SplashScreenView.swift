@@ -56,6 +56,8 @@ struct SplashScreenView: View {
                     self.isActive = true
                 }
             }
+        }.onAppear{
+            let value: () =  HelperFunctions().loadInstructionsFromJSONFile()
         }
     }
 }

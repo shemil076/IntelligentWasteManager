@@ -10,6 +10,9 @@ target 'InteligentWasteManager' do
   # Pods for InteligentWasteManager
   pod 'Socket.IO-Client-Swift'
 
+  # Pods for MyDeviceSDKProject
+  pod 'RealmSwift', '~>10'
+
   target 'InteligentWasteManagerTests' do
     inherit! :search_paths
     # Pods for testing

@@ -26,7 +26,7 @@ enum WasteCategory : String, CaseIterable{
     var wasteType : String = ""
     let category : WasteCategory
     var icon : String = ""
-    
+    var instructoins : [String] = [""]
     
     init(wasteType : String, category: WasteCategory, icon: String) {
         self.wasteType = wasteType

@@ -49,6 +49,13 @@ struct ContentView: View {
                     })
                 }
             }
+        }.onAppear{
+            if let instructions = HelperFunctions().fetchInstructions(forWasteType: "plastic container") {
+                print("Gonna print the instructoins related to alumiunm")
+                print(instructions)
+            } else {
+                print("No instructions found for the specified wasteType.")
+            }
         }
         
     }

@@ -13,6 +13,17 @@ class WasteItemViewModel : ObservableObject{
     
     
     func addNewWasteItem(wasteType : String, category : WasteCategory, icon : String){
+        
+//        print("Waste Type is: \(wasteType)")
+        
+//        if let instructions = HelperFunctions().fetchInstructions(forWasteType: wasteType) {
+//            print("Gonna print the instructoins related to alumiunm")
+//            print(instructions)
+//        } else {
+//            print("No instructions found for the specified wasteType.")
+//        }
+//        
+//        let instructions = [""]
         let newWasteItem = WasteItemModel(wasteType: wasteType, category: category, icon: icon)
         
         if !wasteItems.contains(where: { $0.wasteType == wasteType }) {

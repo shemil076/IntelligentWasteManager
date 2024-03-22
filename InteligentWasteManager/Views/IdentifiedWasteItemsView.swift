@@ -16,6 +16,8 @@ struct IdentifiedWasteItemsView: View {
             List{
                 ForEach(wasteItemViewModel.wasteItems){item in
                     NavigationLink{
+                        // add the instruction view in here
+                        InstructionView(wasteItem: item)
                         
                     }label: {
                         ListItem(wasteItemModel: item)

@@ -27,7 +27,7 @@ class NetworkManager: ObservableObject {
     
     init() {
         // Configure Socket.IO manager
-        let url = URL(string: "ws://192.168.8.120:5000")!
+        let url = URL(string: "ws://192.168.1.2:5000")!
         manager = SocketManager(socketURL: url, config: [.log(true), .compress])
         socket = manager.defaultSocket
         setupSocketEvents()
@@ -66,18 +66,16 @@ class NetworkManager: ObservableObject {
                     self.detectedClasses = detectedClasses
                     
                     detectedClasses.forEach { (name, class, box, confidence) in
-                        self.wasteViewModel.addNewWasteItem(wasteType: StringHelperFunctions.getStringBeforeFirstDash(input: name).capitalized,
-                                                            category: StringHelperFunctions.getCategoryFromRawData(input: name),
-                                                            icon: name)
+                        self.wasteViewModel.addNewWasteItem(wasteType: HelperFunctions.getStringBeforeFirstDash(input: name),
+                                                            category: HelperFunctions.getCategoryFromRawData(input: name),
+                                                            icon: HelperFunctions.getCategoryFromRawData(input: name).rawValue)
                     }
                     
                     self.detectedObjectsList = detectedObjects
                     
                     NotificationCenter.default.post(name: .didReceiveDetectionResults, object: nil, userInfo: ["detectedObjects": detectedObjects])
                 
-                }
-                              
-                
+                }                                              
             } catch {
                 print("Error decoding detected objects: \(error)")
             }

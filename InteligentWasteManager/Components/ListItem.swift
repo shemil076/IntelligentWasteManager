@@ -22,7 +22,7 @@ struct ListItem: View {
                             .cornerRadius(10)
                     )
             }
-            Text(wasteItemModel.wasteType)
+            Text(wasteItemModel.wasteType.capitalized)
                 .font(.headline)
                 .foregroundColor(Color(UIColor(red: 0.133, green: 0.133, blue: 0.133, alpha: 1.0)))
         } .padding(10)

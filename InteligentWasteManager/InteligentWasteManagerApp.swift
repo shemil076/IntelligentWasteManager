@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct InteligentWasteManagerApp: App {
+    
+    
     @State private var isActive: Bool = false
     
     

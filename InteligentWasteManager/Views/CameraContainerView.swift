@@ -15,7 +15,7 @@ struct CameraContainerView: View {
             ZStack {
                 LiveCameraPreview(navigationViewModel: navigationViewModel).ignoresSafeArea()
                     .alert(isPresented: $navigationViewModel.showAlert) {
-                        Alert(title: Text("Scanning for 10 seconds"),
+                        Alert(title: Text("Scanning for 5 seconds"),
                               message: Text("Do you want to wait or go ahead?"),
                               primaryButton: .default(Text("Wait")),
                               secondaryButton: .default(Text("Go Ahead")) {

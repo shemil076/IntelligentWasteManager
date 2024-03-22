@@ -1,0 +1,181 @@
+[
+  {
+    "wasteType": "aluminum",
+    "instruction": [
+      "Identify the aluminum item to ensure it's recyclable.",
+      "Rinse the item thoroughly to remove any residues or contents.",
+      "If possible, crush or flatten the aluminum item to save space in the recycling bin.",
+      "Check local recycling guidelines to confirm aluminum is accepted and if there are specific preparation steps.",
+      "Place the aluminum item in the correct recycling bin, ensuring it's sorted correctly if required by local regulations.",
+      "Check for local recycling rules, clean thoroughly, flatten.",
+    ],
+  },
+  {
+    "wasteType": "cardboard",
+    "instruction": [
+      "Remove any plastic or non-paper packaging materials attached to the cardboard.",
+      "Flatten the cardboard boxes to save space in the recycling bin and facilitate transportation.",
+      "Rinse or wipe away any food residue or contaminants, if applicable, to avoid contamination.",
+      "Check local recycling rules to ensure cardboard is accepted and if certain types (e.g., waxed cardboard) are excluded.",
+      "Place the clean, flattened cardboard in the designated recycling bin or take it to a recycling center.",
+      "Remove any plastic coating, flatten, place in cardboard recycling.",
+    ],
+  },
+  {
+    "wasteType": "egg shell",
+    "instruction": ["Crush, add to compost bin."],
+  },
+  {
+    "wasteType": "facemask",
+    "instruction": [
+      "If the mask is single-use, dispose of it immediately after use in a closed bin.",
+      "Do not attempt to recycle used face masks as they can be contaminated and are generally not recyclable.",
+      "Consider using reusable masks to reduce waste, but ensure they are washed regularly.",
+    ],
+  },
+  {
+    "wasteType": "food wrapper",
+    "instruction": [
+      "Ensure the food wrapper is empty and free from food residue.",
+      "Since most food wrappers are not recyclable due to their mixed materials, dispose of them in the general waste bin.",
+      "Consider reducing waste by using reusable food containers or choosing products with biodegradable packaging.",
+    ],
+  },
+  {
+    "wasteType": "fruit peels",
+    "instruction": [
+      "Collect fruit peels in a designated compost bin.",
+      "If you do not have access to a compost facility, consider starting a small compost pile or bin at home.",
+      "Fruit peels can be buried directly in garden soil as a natural fertilizer, enriching the soil with nutrients as they decompose.",
+      "Avoid disposing of fruit peels in general waste bins as they can create methane gas in landfills.",
+      "Consider using fruit peels as a natural cleaning agent or for other household purposes before composting.",
+    ],
+  },
+  {
+    "wasteType": "glass bottle",
+    "instruction": [
+      "Rinse the glass bottle to remove any residues or liquids.",
+      "Remove any labels, caps, or non-glass components if required by your local recycling program.",
+      "Sort glass bottles by color if your local recycling facility requires it, as this can aid in the recycling process.",
+      "Place the glass bottles in a recycling bin designated for glass materials.",
+      "If your area does not have curbside recycling for glass, take the bottles to a local recycling center or drop-off site.",
+    ],
+  },
+  {
+    "wasteType": "left-over food",
+    "instruction": [
+      "Separate left-over food from non-biodegradable waste.",
+      "Use airtight containers to store edible left-over food for later use, reducing waste.",
+      "Donate excess edible left-over food to food banks or shelters if possible.",
+      "Compost left-over food that cannot be reused or donated, adding it to a compost bin or pile.",
+      "Avoid composting meat, dairy, and oily foods if using a home composting setup to prevent odors and pests.",
+    ],
+  },
+  {
+    "wasteType": "paper",
+    "instruction": [
+      "Remove any plastic coatings, stickers, or non-paper attachments before recycling.",
+      "Shred sensitive documents for security before recycling, if necessary.",
+      "Flatten cardboard boxes and paper packaging to save space in the recycling bin.",
+      "Keep paper dry and clean to prevent contamination in the recycling process.",
+      "Use both sides of paper for printing or writing to reduce waste before disposal.",
+    ],
+  },
+  {
+    "wasteType": "pet bottle",
+    "instruction": [
+      "Empty the PET bottle completely of any liquids.",
+      "Rinse the bottle to remove any residue from its contents.",
+      "Remove and dispose of the bottle cap separately, unless local recycling guidelines state otherwise.",
+      "Crush or flatten the bottle to save space in the recycling bin, if permitted by local recycling facilities.",
+      "Check for a recycling symbol to ensure the bottle is made of PET and recyclable.",
+    ],
+  },
+  {
+    "wasteType": "plastic bag",
+    "instruction": [
+      "Collect plastic bags and consolidate them into one bag to minimize space and prevent them from becoming airborne.",
+      "Check with local grocery stores or recycling centers to see if they accept plastic bags for recycling.",
+      "Do not place loose plastic bags in curbside recycling bins as they can cause issues with recycling machinery.",
+      "Reuse plastic bags as much as possible for personal use to reduce waste.",
+      "If recycling or reuse is not an option, dispose of plastic bags in the general waste bin, ensuring they are secured to prevent litter.",
+    ],
+  },
+  {
+    "wasteType": "plastic bottle",
+    "instruction": [
+      "Empty the plastic bottle and remove any remaining liquid.",
+      "Rinse the bottle to clean out any residue from beverages or liquids.",
+      "Remove labels and caps, as some recycling programs require these to be recycled separately.",
+      "Flatten the bottle if possible to save space in your recycling bin.",
+      "Check your local recycling guidelines to ensure the type of plastic is accepted.",
+    ],
+  },
+  {
+    "wasteType": "plastic container",
+    "instruction": [
+      "Empty the plastic container of any contents.",
+      "Rinse the container thoroughly to remove food residue or other materials.",
+      "Check the container for recycling symbols to identify the type of plastic.",
+      "Remove any labels, lids, or non-plastic components if required by local recycling guidelines.",
+      "Flatten or compact the container if possible to save space in the recycling bin.",
+    ],
+  },
+  {
+    "wasteType": "plastic sachet",
+    "instruction": [
+      "Ensure the plastic sachet is completely empty and free of any liquid or product.",
+      "Since plastic sachets are typically not recyclable due to their mixed material composition, dispose of them in the general waste bin.",
+      "Consider reducing usage of products in plastic sachets by opting for products with sustainable packaging.",
+      "Participate in or advocate for local initiatives aimed at collecting and repurposing non-recyclable plastics.",
+    ],
+  },
+  {
+    "wasteType": "plastic straw",
+    "instruction": [
+      "Do not dispose of plastic straws in recycling bins as they are too small and can damage recycling machinery.",
+      "Dispose of plastic straws in the general waste bin.",
+      "Consider using reusable or biodegradable straws as alternatives to reduce plastic waste.",
+      "Participate in local clean-up initiatives to help remove plastic straws and other plastics from natural environments.",
+    ],
+  },
+  {
+    "wasteType": "styrofoam containers",
+    "instruction": [
+      "Clean the Styrofoam container to remove any food or liquid residue.",
+      "Due to its non-biodegradable nature, Styrofoam should be placed in the general waste bin if local recycling options are not available.",
+      "Check for local recycling programs that accept Styrofoam, as some specialized facilities can process it.",
+      "Consider reducing the use of Styrofoam containers by opting for alternatives made from recyclable or compostable materials.",
+    ],
+  },
+  {
+    "wasteType": "treeleaves",
+    "instruction": [
+      "Collect fallen tree leaves using a rake or leaf blower.",
+      "Use collected leaves as mulch in garden beds to retain soil moisture and reduce weed growth.",
+      "Compost the leaves to create a nutrient-rich compost for gardening and landscaping.",
+      "If municipal collection is available, place leaves in designated biodegradable bags or bins for pickup.",
+      "Avoid burning leaves, as this can contribute to air pollution and is illegal in many areas.",
+    ],
+  },
+  {
+    "wasteType": "uht carton",
+    "instruction": [
+      "Empty the UHT carton completely and rinse to remove any residue.",
+      "Flatten the carton to save space in the recycling bin and facilitate transport.",
+      "Check the carton for the recycling symbol to ensure it is accepted by your local recycling program.",
+      "Remove plastic caps or straws, as these may need to be recycled separately according to local guidelines.",
+      "Place the UHT carton in the recycling bin designated for paper or mixed materials, as appropriate.",
+    ],
+  },
+  {
+    "wasteType": "vegetable peels",
+    "instruction": [
+      "Collect vegetable peels in a compost bin designated for organic waste.",
+      "If home composting, add vegetable peels to your compost pile, mixing with dry brown materials to balance moisture.",
+      "Use vegetable peels as a natural fertilizer in your garden by burying them near the roots of plants.",
+      "Consider starting a worm composting bin (vermicomposting) as worms thrive on vegetable peels.",
+      "If you don't have access to composting, check for local community compost programs where you can bring your vegetable peels.",
+    ],
+  },
+]
