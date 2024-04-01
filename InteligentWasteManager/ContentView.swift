@@ -15,29 +15,45 @@ struct ContentView: View {
         
         NavigationStack{
             ZStack{
-                Color(red: 248 / 255, green: 250 / 255, blue: 237 / 255)
-                    .ignoresSafeArea()
+                VStack {
+                    Spacer()
+                    CurvedShape()
+                        .fill(LinearGradient(gradient: Gradient(colors: [Color(red: 248 / 255, green: 250 / 255, blue: 237 / 255), Color(red: 238 / 255, green: 242 / 255, blue: 218 / 255)]), startPoint: .top, endPoint: .bottom)).ignoresSafeArea()
+                }.ignoresSafeArea()
+                
+                Image("wasteManagementPurple")
+                    .resizable()
+                    .scaledToFit()
+                    .padding([.top], UIScreen.main.bounds.width)
+
                 VStack{
                     HStack{
                         Text("Waste Manager")
                             .font(.title2)
                             .foregroundColor(Color(UIColor(red: 0.133, green: 0.133, blue: 0.133, alpha: 1.0)))
+                        
                         Spacer()
-                    }.padding([.top], -10)
+                    }
+                    .padding([.top], -10)
                     Spacer()
-                    SlideShowView(images: mainImages)
-                    Spacer()
+
                     
-                    ScrollView(.horizontal) {
-                        LazyHStack {
+                    ScrollView() {
+                        LazyVStack {
                             ForEach(features.indices, id: \.self){ index in
                                 SliderButton( feature: features[index])
                                 
                             }
                         }
-                    }
+                    }.padding(.top)
                     
-                }.padding(.horizontal)
+                    
+                    
+                    Label("2024", systemImage: "c.circle").font(.footnote)
+                    
+                }
+                .padding(.horizontal)
+                
                 
             }
             .navigationTitle("Intelligent")

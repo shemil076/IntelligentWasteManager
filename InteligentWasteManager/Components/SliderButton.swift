@@ -23,27 +23,28 @@ struct SliderButton: View {
                 ZStack {
                     VStack {
                         HStack {
+                            Text(feature)
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .padding()
+                            Spacer()
                             Image(feature)
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: UIScreen.main.bounds.width / 1.5)
+                                .frame(width: UIScreen.main.bounds.width / 2.9)
                             Spacer()
                         }
-                        .padding([.top], -60)
-                        .padding([.horizontal], -20)
                         
-                        Text(feature)
-                            .padding(.bottom)
-                            .foregroundColor(.white)
                     }
+
                 }
                 .background(
                     Rectangle()
-                        .background(Color(UIColor(red: 0.133, green: 0.133, blue: 0.133, alpha: 1.0)))
-                        .frame(width: UIScreen.main.bounds.width / 2.5)
-                        .cornerRadius(50)
+                        .background(LinearGradient(gradient: Gradient(colors: [Color(red: 52 / 255, green: 87 / 255, blue: 58 / 255), Color(red: 42 / 255, green: 60 / 255, blue: 47 / 255)]), startPoint: .leading, endPoint: .trailing))
+//                        .background(Color(UIColor(red: 0.133, green: 0.133, blue: 0.133, alpha: 1.0)))
+                        .cornerRadius(30)
                 )
-            }
+            }.padding(.bottom)
             .onTapGesture {
                 isActive = true
             }

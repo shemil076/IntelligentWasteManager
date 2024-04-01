@@ -34,6 +34,7 @@
 		AD9DF3102B9EF9B400D1A97E /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9DF30F2B9EF9B400D1A97E /* AppDependencyContainer.swift */; };
 		ADD3C9BE2B8DC55D00BCFBE8 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD3C9BD2B8DC55D00BCFBE8 /* ListItem.swift */; };
 		ADD3C9C02B8DD24300BCFBE8 /* IdentifiedWasteItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD3C9BF2B8DD24300BCFBE8 /* IdentifiedWasteItemsView.swift */; };
+		ADF2F33E2BBB0F7B004E8CAC /* CurvedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF2F33D2BBB0F7B004E8CAC /* CurvedShape.swift */; };
 		EA237DA2B55AFA772EB4AEBA /* Pods_InteligentWasteManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 819439A26D4859A889B55C2C /* Pods_InteligentWasteManagerTests.framework */; };
 		F01F9A1198663A56FD964C64 /* Pods_InteligentWasteManager_InteligentWasteManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3F11A75988953B003DF9AE /* Pods_InteligentWasteManager_InteligentWasteManagerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -100,6 +101,7 @@
 		ADD3C9BD2B8DC55D00BCFBE8 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		ADD3C9BF2B8DD24300BCFBE8 /* IdentifiedWasteItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiedWasteItemsView.swift; sourceTree = "<group>"; };
 		ADE3C3702BA0AD20003520EA /* InteligentWasteManagerTestsUnitTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InteligentWasteManagerTestsUnitTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADF2F33D2BBB0F7B004E8CAC /* CurvedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedShape.swift; sourceTree = "<group>"; };
 		B4AB1B23FF6A141FE5AC5046 /* Pods-InteligentWasteManager-InteligentWasteManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteligentWasteManager-InteligentWasteManagerUITests.debug.xcconfig"; path = "Target Support Files/Pods-InteligentWasteManager-InteligentWasteManagerUITests/Pods-InteligentWasteManager-InteligentWasteManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FE0BAC2CB826709213975AD4 /* Pods-InteligentWasteManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteligentWasteManagerTests.debug.xcconfig"; path = "Target Support Files/Pods-InteligentWasteManagerTests/Pods-InteligentWasteManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -196,6 +198,7 @@
 		AD3D93D22B89138F0028444A /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
+				ADF2F33D2BBB0F7B004E8CAC /* CurvedShape.swift */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 				AD60B9CE2B8D085F006DF8D0 /* LiveCameraPreview.swift in Sources */,
 				ADD3C9BE2B8DC55D00BCFBE8 /* ListItem.swift in Sources */,
 				ADD3C9C02B8DD24300BCFBE8 /* IdentifiedWasteItemsView.swift in Sources */,
+				ADF2F33E2BBB0F7B004E8CAC /* CurvedShape.swift in Sources */,
 				AD847FDF2B89F62D00E76D0E /* SlideShowViewModel.swift in Sources */,
 				AD3D93D12B890B3D0028444A /* SplashScreenView.swift in Sources */,
 				AD0655B52B8E635400841D35 /* WasteItemViewModel.swift in Sources */,
