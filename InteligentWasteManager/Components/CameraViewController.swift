@@ -90,7 +90,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             let viewSize = self.boundingBoxOverlay.bounds.size
             for detectedObject in self.networkManager.detectedObjectsList {
                 let box = detectedObject.box
-                let imageSize = CGSize(width: 200, height: 350)
+                let imageSize = CGSize(width: 480, height: 640)
                 let rect = self.scaleAndTranslate(box: box, fromImageSize: imageSize, toViewSize: viewSize)
                 let boundingBoxView = UIView(frame: rect)
                 boundingBoxView.layer.borderColor = UIColor.green.cgColor

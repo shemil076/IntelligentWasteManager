@@ -16,7 +16,6 @@ struct IdentifiedWasteItemsView: View {
             List{
                 ForEach(wasteItemViewModel.wasteItems){item in
                     NavigationLink{
-                        // add the instruction view in here
                         InstructionView(wasteItem: item)
                         
                     }label: {
@@ -32,7 +31,7 @@ struct IdentifiedWasteItemsView: View {
             
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Button(action: {}, label: {
                         Label("", systemImage: "list.bullet")
                     })
                 }
