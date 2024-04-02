@@ -20,6 +20,10 @@ class WasteItemViewModel : ObservableObject{
             wasteItems.append(newWasteItem)
         }
     }
+    
+    func removeAllWaste(){
+        wasteItems.removeAll()
+    }
 }
 
 

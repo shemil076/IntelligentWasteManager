@@ -86,9 +86,20 @@ class NetworkManager: ObservableObject {
     
     func sendFrame(_ imageData: Data) {
         guard isConnected else { return }
+        print("ready to send")
         let dataString = imageData.base64EncodedString()
+        print("Sent the image,\(dataString)")
         socket.emit("frame", ["data": dataString]) // Event name and data payload
     }
+    
+    func sendImage(_ imageData: Data){
+        guard isConnected else { return }
+        print("ready to send")
+        let dataString = imageData.base64EncodedString()
+//        print("Sent the image,\(dataString)")
+        socket.emit("image", ["data": dataString])
+    }
+    
     
     func sendMessage(_ message: String) {
         guard isConnected else {

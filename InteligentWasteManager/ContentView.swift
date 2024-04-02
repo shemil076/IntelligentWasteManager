@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var wasteItemViewModel : WasteItemViewModel
     var features = ["Open Camera", "Upload Video", "Upload Image"]
     var mainImages = ["Waste management-bro", "Waste management-cuate", "Waste management-rafiki", "wasteManagementPurple"  ]
+    
     
     var body: some View {
         
@@ -40,9 +42,14 @@ struct ContentView: View {
                     
                     ScrollView() {
                         LazyVStack {
-                            ForEach(features.indices, id: \.self){ index in
-                                SliderButton( feature: features[index])
-                                
+//                            ForEach(features.indices, id: \.self){ index in
+//                                SliderButton( feature: features[index])
+//                                
+//                            }
+                            
+                            ForEach(MainOptions.allCases, id: \.self){ option in
+                                SliderButton( option: option)
+                                    
                             }
                         }
                     }.padding(.top)
@@ -64,13 +71,6 @@ struct ContentView: View {
                         Label("", systemImage: "list.bullet")
                     })
                 }
-            }
-        }.onAppear{
-            if let instructions = HelperFunctions().fetchInstructions(forWasteType: "plastic container") {
-                print("Gonna print the instructoins related to alumiunm")
-                print(instructions)
-            } else {
-                print("No instructions found for the specified wasteType.")
             }
         }
         

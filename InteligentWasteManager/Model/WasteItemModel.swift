@@ -9,17 +9,7 @@ import Foundation
 import Observation
 
 
-enum RawWasteCategory : String, CaseIterable{
-    case recylable = "Non_biodegradable-Recyclable"
-    case biodegradable = "Biodegradable"
-    case nonBiodegradable = "Non_Biodegradable"
-}
 
-enum WasteCategory : String, CaseIterable{
-    case recylable = "Recylable"
-    case biodegradable = "Biodegradable"
-    case nonBiodegradable = "Non-Biodegradable"
-}
 
 @Observable class WasteItemModel: Identifiable{
     let id : String = UUID().uuidString

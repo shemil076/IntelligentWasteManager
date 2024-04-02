@@ -35,6 +35,9 @@
 		ADD3C9BE2B8DC55D00BCFBE8 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD3C9BD2B8DC55D00BCFBE8 /* ListItem.swift */; };
 		ADD3C9C02B8DD24300BCFBE8 /* IdentifiedWasteItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD3C9BF2B8DD24300BCFBE8 /* IdentifiedWasteItemsView.swift */; };
 		ADF2F33E2BBB0F7B004E8CAC /* CurvedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF2F33D2BBB0F7B004E8CAC /* CurvedShape.swift */; };
+		ADF2F3402BBB2638004E8CAC /* ImageUploaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF2F33F2BBB2638004E8CAC /* ImageUploaderView.swift */; };
+		ADF2F3422BBB2B5F004E8CAC /* ImagePickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF2F3412BBB2B5F004E8CAC /* ImagePickerCoordinator.swift */; };
+		ADF2F3462BBB2F5B004E8CAC /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF2F3452BBB2F5B004E8CAC /* Enums.swift */; };
 		EA237DA2B55AFA772EB4AEBA /* Pods_InteligentWasteManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 819439A26D4859A889B55C2C /* Pods_InteligentWasteManagerTests.framework */; };
 		F01F9A1198663A56FD964C64 /* Pods_InteligentWasteManager_InteligentWasteManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3F11A75988953B003DF9AE /* Pods_InteligentWasteManager_InteligentWasteManagerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -102,6 +105,9 @@
 		ADD3C9BF2B8DD24300BCFBE8 /* IdentifiedWasteItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiedWasteItemsView.swift; sourceTree = "<group>"; };
 		ADE3C3702BA0AD20003520EA /* InteligentWasteManagerTestsUnitTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InteligentWasteManagerTestsUnitTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF2F33D2BBB0F7B004E8CAC /* CurvedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedShape.swift; sourceTree = "<group>"; };
+		ADF2F33F2BBB2638004E8CAC /* ImageUploaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploaderView.swift; sourceTree = "<group>"; };
+		ADF2F3412BBB2B5F004E8CAC /* ImagePickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCoordinator.swift; sourceTree = "<group>"; };
+		ADF2F3452BBB2F5B004E8CAC /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		B4AB1B23FF6A141FE5AC5046 /* Pods-InteligentWasteManager-InteligentWasteManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteligentWasteManager-InteligentWasteManagerUITests.debug.xcconfig"; path = "Target Support Files/Pods-InteligentWasteManager-InteligentWasteManagerUITests/Pods-InteligentWasteManager-InteligentWasteManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FE0BAC2CB826709213975AD4 /* Pods-InteligentWasteManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteligentWasteManagerTests.debug.xcconfig"; path = "Target Support Files/Pods-InteligentWasteManagerTests/Pods-InteligentWasteManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +167,7 @@
 				AD0655AF2B8E60D700841D35 /* WasteItemModel.swift */,
 				AD8D53C12B9D9943003BD4C0 /* DetectedObject.swift */,
 				AD88594A2BA7279500389D4F /* DisposalInstructionModel.swift */,
+				ADF2F3452BBB2F5B004E8CAC /* Enums.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,6 +198,7 @@
 				ADD3C9BF2B8DD24300BCFBE8 /* IdentifiedWasteItemsView.swift */,
 				AD23020E2B8F1D78003A19CC /* InstructionView.swift */,
 				AD9DF30B2B9EC89800D1A97E /* CameraContainerView.swift */,
+				ADF2F33F2BBB2638004E8CAC /* ImageUploaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -276,6 +284,7 @@
 				AD847FDE2B89F62D00E76D0E /* SlideShowViewModel.swift */,
 				ADD3C9BD2B8DC55D00BCFBE8 /* ListItem.swift */,
 				AD932A4D2BADD4FD004728F0 /* CameraViewController.swift */,
+				ADF2F3412BBB2B5F004E8CAC /* ImagePickerCoordinator.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -574,11 +583,13 @@
 			files = (
 				AD88594B2BA7279500389D4F /* DisposalInstructionModel.swift in Sources */,
 				AD932A4E2BADD4FD004728F0 /* CameraViewController.swift in Sources */,
+				ADF2F3402BBB2638004E8CAC /* ImageUploaderView.swift in Sources */,
 				AD847FDD2B89E30400E76D0E /* SliderButton.swift in Sources */,
 				AD7DD2ED2B8796A200594455 /* ContentView.swift in Sources */,
 				AD9DF3102B9EF9B400D1A97E /* AppDependencyContainer.swift in Sources */,
 				AD23020F2B8F1D78003A19CC /* InstructionView.swift in Sources */,
 				AD7C761F2BAD802E00871286 /* HelperFunctions.swift in Sources */,
+				ADF2F3422BBB2B5F004E8CAC /* ImagePickerCoordinator.swift in Sources */,
 				AD9DF30E2B9EC8C700D1A97E /* NavigationViewModel.swift in Sources */,
 				AD9DF30C2B9EC89800D1A97E /* CameraContainerView.swift in Sources */,
 				AD8D53C22B9D9943003BD4C0 /* DetectedObject.swift in Sources */,
@@ -592,6 +603,7 @@
 				AD847FDF2B89F62D00E76D0E /* SlideShowViewModel.swift in Sources */,
 				AD3D93D12B890B3D0028444A /* SplashScreenView.swift in Sources */,
 				AD0655B52B8E635400841D35 /* WasteItemViewModel.swift in Sources */,
+				ADF2F3462BBB2F5B004E8CAC /* Enums.swift in Sources */,
 				AD191B9C2B906A3A00880DBD /* NetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
