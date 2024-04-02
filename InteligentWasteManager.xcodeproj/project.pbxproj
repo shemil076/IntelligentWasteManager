@@ -16,6 +16,8 @@
 		AD2940072BACE477005654F2 /* instructions.json in Resources */ = {isa = PBXBuildFile; fileRef = AD2940062BACE477005654F2 /* instructions.json */; };
 		AD3D93D12B890B3D0028444A /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3D93D02B890B3D0028444A /* SplashScreenView.swift */; };
 		AD60B9CE2B8D085F006DF8D0 /* LiveCameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60B9CD2B8D085F006DF8D0 /* LiveCameraPreview.swift */; };
+		AD7782A62BBC293D00CA93D4 /* VideoUploaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7782A52BBC293D00CA93D4 /* VideoUploaderView.swift */; };
+		AD7782A82BBC299D00CA93D4 /* VideoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7782A72BBC299D00CA93D4 /* VideoPicker.swift */; };
 		AD7C761F2BAD802E00871286 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C761E2BAD802E00871286 /* HelperFunctions.swift */; };
 		AD7DD2EB2B8796A200594455 /* InteligentWasteManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7DD2EA2B8796A200594455 /* InteligentWasteManagerApp.swift */; };
 		AD7DD2ED2B8796A200594455 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7DD2EC2B8796A200594455 /* ContentView.swift */; };
@@ -82,6 +84,8 @@
 		AD2940062BACE477005654F2 /* instructions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = instructions.json; sourceTree = "<group>"; };
 		AD3D93D02B890B3D0028444A /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		AD60B9CD2B8D085F006DF8D0 /* LiveCameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCameraPreview.swift; sourceTree = "<group>"; };
+		AD7782A52BBC293D00CA93D4 /* VideoUploaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoUploaderView.swift; sourceTree = "<group>"; };
+		AD7782A72BBC299D00CA93D4 /* VideoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPicker.swift; sourceTree = "<group>"; };
 		AD7C761E2BAD802E00871286 /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		AD7DD2E72B8796A200594455 /* InteligentWasteManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteligentWasteManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7DD2EA2B8796A200594455 /* InteligentWasteManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteligentWasteManagerApp.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 				AD23020E2B8F1D78003A19CC /* InstructionView.swift */,
 				AD9DF30B2B9EC89800D1A97E /* CameraContainerView.swift */,
 				ADF2F33F2BBB2638004E8CAC /* ImageUploaderView.swift */,
+				AD7782A52BBC293D00CA93D4 /* VideoUploaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 				ADD3C9BD2B8DC55D00BCFBE8 /* ListItem.swift */,
 				AD932A4D2BADD4FD004728F0 /* CameraViewController.swift */,
 				ADF2F3412BBB2B5F004E8CAC /* ImagePickerCoordinator.swift */,
+				AD7782A72BBC299D00CA93D4 /* VideoPicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -594,6 +600,7 @@
 				AD9DF30C2B9EC89800D1A97E /* CameraContainerView.swift in Sources */,
 				AD8D53C22B9D9943003BD4C0 /* DetectedObject.swift in Sources */,
 				AD0655B02B8E60D700841D35 /* WasteItemModel.swift in Sources */,
+				AD7782A82BBC299D00CA93D4 /* VideoPicker.swift in Sources */,
 				AD7DD2EB2B8796A200594455 /* InteligentWasteManagerApp.swift in Sources */,
 				AD191B9E2B906A6000880DBD /* ApiResponse.swift in Sources */,
 				AD60B9CE2B8D085F006DF8D0 /* LiveCameraPreview.swift in Sources */,
@@ -605,6 +612,7 @@
 				AD0655B52B8E635400841D35 /* WasteItemViewModel.swift in Sources */,
 				ADF2F3462BBB2F5B004E8CAC /* Enums.swift in Sources */,
 				AD191B9C2B906A3A00880DBD /* NetworkManager.swift in Sources */,
+				AD7782A62BBC293D00CA93D4 /* VideoUploaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

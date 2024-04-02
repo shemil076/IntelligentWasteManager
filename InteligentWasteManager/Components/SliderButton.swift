@@ -59,7 +59,7 @@ struct SliderButton: View {
             case .scan:
                 CameraContainerView()
             case .uploadVideo:
-                EmptyView()
+                VideoUploaderView()
             case .uploadImage:
                 ImageUploaderView()
             }
