@@ -82,23 +82,6 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         view.bringSubviewToFront(boundingBoxOverlay)
     }
     
-//    func drawBoundingBoxes(){
-//        DispatchQueue.main.async { [weak self] in
-//            guard let self = self else { return }
-//            self.boundingBoxOverlay.subviews.forEach { $0.removeFromSuperview() }
-//            
-//            let viewSize = self.boundingBoxOverlay.bounds.size
-//            for detectedObject in self.networkManager.detectedObjectsList {
-//                let box = detectedObject.box
-//                let imageSize = CGSize(width: 480, height: 640)
-//                let rect = self.scaleAndTranslate(box: box, fromImageSize: imageSize, toViewSize: viewSize)
-//                let boundingBoxView = UIView(frame: rect)
-//                boundingBoxView.layer.borderColor = UIColor.green.cgColor
-//                boundingBoxView.layer.borderWidth = 2.0
-//                self.boundingBoxOverlay.addSubview(boundingBoxView)
-//            }
-//        }
-//    }
 
     func drawBoundingBoxes() {
         DispatchQueue.main.async { [weak self] in
@@ -108,7 +91,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             let viewSize = self.boundingBoxOverlay.bounds.size
             for detectedObject in self.networkManager.detectedObjectsList {
                 // Use the scaleAndTranslate function to adjust bounding box coordinates
-                let rect = self.scaleAndTranslate(box: detectedObject.box, fromImageSize: CGSize(width: 480, height: 640), toViewSize: viewSize)
+                let rect = self.scaleAndTranslate(box: detectedObject.box, fromImageSize: CGSize(width: 480, height: 480), toViewSize: viewSize)
                 let boundingBoxView = UIView(frame: rect)
                 boundingBoxView.layer.borderColor = UIColor.green.cgColor
                 boundingBoxView.layer.borderWidth = 2.0

@@ -22,7 +22,7 @@ class WasteItemViewModel : ObservableObject{
     }
     
     func removeAllWaste(){
-        wasteItems.removeAll()
+        wasteItems = []
     }
 }
 

@@ -17,7 +17,9 @@ struct CameraContainerView: View {
                     .alert(isPresented: $navigationViewModel.showAlert) {
                         Alert(title: Text("Scanning for 5 seconds"),
                               message: Text("Do you want to wait or go ahead?"),
-                              primaryButton: .default(Text("Wait")),
+                              primaryButton: .default(Text("Wait")){
+                            navigationViewModel.shouldRestartTimer.toggle()
+                        },
                               secondaryButton: .default(Text("Go Ahead")) {
                             navigationViewModel.navigate = true
                               })

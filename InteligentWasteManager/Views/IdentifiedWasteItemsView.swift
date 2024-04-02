@@ -13,6 +13,11 @@ struct IdentifiedWasteItemsView: View {
     
     var body: some View {
         NavigationStack{
+            
+            if wasteItemViewModel.wasteItems.isEmpty {
+                Spacer()
+                ProgressView()
+            }
             List{
                 ForEach(wasteItemViewModel.wasteItems){item in
                     NavigationLink{

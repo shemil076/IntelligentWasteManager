@@ -7,6 +7,8 @@
 
 import SwiftUI
 import AVFoundation
+import Combine
+
 
 struct LiveCameraPreview: UIViewControllerRepresentable {
     @ObservedObject var navigationViewModel: NavigationViewModel
@@ -29,11 +31,22 @@ struct LiveCameraPreview: UIViewControllerRepresentable {
         var parent: LiveCameraPreview
         var timer: Timer?
         var navigationViewModel :NavigationViewModel
+        private var cancellables = Set<AnyCancellable>()
         
         init(_ parent: LiveCameraPreview, navigationViewModel : NavigationViewModel) {
             self.parent = parent
             self.navigationViewModel = navigationViewModel
             super.init()
+            
+            setupTimer()
+            
+            navigationViewModel.$shouldRestartTimer
+                .dropFirst() // Ignore the initial value
+                .sink { [weak self] _ in self?.setupTimer() }
+                .store(in: &cancellables)
+        }
+        
+        func setupTimer() {
             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                 self.navigationViewModel.showAlert = true
             }

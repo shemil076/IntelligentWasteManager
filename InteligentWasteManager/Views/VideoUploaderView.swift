@@ -12,18 +12,34 @@ struct VideoUploaderView: View {
     @State private var videoURL: URL?
     @State private var isVideoPickerDisplayed = false
     var networkManager : NetworkManager = AppDependencyContainer.shared.networkManager
+    @State var shouldNavigate : Bool = false
     
     var body: some View {
-        VStack {
-            Button("Select Video") {
-                isVideoPickerDisplayed = true
-            }
-        }
-        .sheet(isPresented: $isVideoPickerDisplayed) {
-            VideoPicker(videoURL: $videoURL)
-        }
-        .onChange(of: videoURL) { _ in
-            processAndSendVideo()
+        NavigationStack{
+            ZStack{
+                Color(red: 248 / 255, green: 250 / 255, blue: 237 / 255)
+                    .ignoresSafeArea()
+                VStack {
+                    
+                    Button(action: {
+                        isVideoPickerDisplayed = true
+                    }){
+                        Image("upload-video-icon")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: UIScreen.main.bounds.width / 3)
+                    }
+                }
+                .sheet(isPresented: $isVideoPickerDisplayed) {
+                    VideoPicker(videoURL: $videoURL)
+                }
+                .onChange(of: videoURL) { _ in
+                    processAndSendVideo()
+                }
+                NavigationLink(destination: IdentifiedWasteItemsView(), isActive: $shouldNavigate) {
+                    EmptyView()
+                }
+            }.navigationTitle("Upload a video").navigationBarTitleDisplayMode(.inline)
         }
     }
 
@@ -31,6 +47,7 @@ struct VideoUploaderView: View {
         guard let videoURL = videoURL else { return }
         // Extract frames and send to server
         extractFramesAndSend(videoURL: videoURL)
+        shouldNavigate = true
     }
     
     

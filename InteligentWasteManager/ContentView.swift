@@ -42,10 +42,6 @@ struct ContentView: View {
                     
                     ScrollView() {
                         LazyVStack {
-//                            ForEach(features.indices, id: \.self){ index in
-//                                SliderButton( feature: features[index])
-//                                
-//                            }
                             
                             ForEach(MainOptions.allCases, id: \.self){ option in
                                 SliderButton( option: option)

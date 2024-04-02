@@ -12,6 +12,8 @@ struct ImageUploaderView: View {
     @State private var image: UIImage?
     @State private var isImagePickerDisplayed = false
     var networkManager : NetworkManager = AppDependencyContainer.shared.networkManager
+    @State var shouldNavigate : Bool = false
+    
     
     
     var body: some View {
@@ -21,25 +23,29 @@ struct ImageUploaderView: View {
                     .ignoresSafeArea()
                 if let image = image {
                     
-                    NavigationLink(destination: IdentifiedWasteItemsView())
-                    {
-                        VStack{
-                            Image(uiImage: image)
-                                .resizable()
-                                .scaledToFit()
+                    
+                    VStack{
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFit()
+                        
+                        Button(action: {
+                            sendImageToServer()
+                            shouldNavigate = true
+                        }, label: {
+                            Text("Upload")
+                                .frame(width: UIScreen.main.bounds.width / 3)
+                                .padding()
+                                .background(Color(UIColor(red: 0.133, green: 0.133, blue: 0.133, alpha: 1.0)))
+                                .foregroundColor(.white)
+                                .clipShape(Capsule())
                             
-                            Button(action: {
-                                sendImageToServer()
-                            }, label: {
-                                Text("Upload")
-                                    .frame(width: UIScreen.main.bounds.width / 3)
-                                    .padding()
-                                    .background(Color(UIColor(red: 0.133, green: 0.133, blue: 0.133, alpha: 1.0)))
-                                    .foregroundColor(.white)
-                                    .clipShape(Capsule())
-                                
-                            }).padding(.top)
-                        }
+                        }).padding(.top)
+                    }.padding()
+                    
+                    
+                    NavigationLink(destination: IdentifiedWasteItemsView(), isActive: $shouldNavigate) {
+                        EmptyView()
                     }
                     
                     .padding()
@@ -75,10 +81,3 @@ struct ImageUploaderView: View {
 #Preview {
     ImageUploaderView()
 }
-
-
-//let uiImage = UIImage(cgImage: cgImage)
-//guard let imageData = uiImage.jpegData(compressionQuality: 0.5) else { return } // Compress to reduce size
-//
-//// Send the frame over WebSocket
-//networkManager.sendFrame(imageData)
